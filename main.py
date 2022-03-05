@@ -14,6 +14,7 @@ print(tf.__version__)
 
 # auto initialisation below creates 3 by 3 matrix
 t = tf.range(start=1, limit=10, delta=2)
+t = tf.cast(t, dtype=tf.float64)
 u = tf.range(9)
 v = tf.random.uniform((1, 3), minval=0, maxval=55)
 w = tf.random.normal((3, 3), mean=0, stddev=1)
