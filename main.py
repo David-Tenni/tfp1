@@ -74,3 +74,12 @@ print("first row all elements: ", r[0, :])
 print("first two rows: ", r[0:2, :])
 # reshaping a tensor
 print("reshaping a tensor")
+s = tf.range(9)
+print("s: ", s)
+
+s = tf.reshape(s, (3, 3))
+print("reshaping: ", s)
+
+s = tf.transpose(s, perm=[1, 0])  # swaps the axis
+
+print("swapping the axis: ", s)
