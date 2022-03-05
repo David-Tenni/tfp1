@@ -56,5 +56,21 @@ p = pa @ pb  # simplified of above line
 print("h: ", h, "i: ", i, "j: ", j, "k :", k, "l :", l, "m: ", m, "n :", n, "o :", o, "p :", p)
 # indexing of a tensor
 print('indexing of a tensor')
+
+q = tf.constant([0, 1, 2, 3, 4, 5, 6, 7])
+# print all elements
+print("q: ", q[:])
+print("print everything except 0 element: ", q[1:])
+print("print everything to element at the third index from 2 index: ", q[1:3])
+print("print every second element: ", q[::2])
+print("print in a reverse order: ", q[::-1])
+q_indices = tf.constant([2, 3])
+q_ind = tf.gather(q, q_indices)
+
+print("print specific element: ", q_ind)
+
+r = tf.constant([[1, 2], [3, 4], [5, 6]])
+print("first row all elements: ", r[0, :])
+print("first two rows: ", r[0:2, :])
 # reshaping a tensor
 print("reshaping a tensor")
